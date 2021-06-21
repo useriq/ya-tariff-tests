@@ -1,0 +1,7 @@
+.idea/*
+target
+*.iml
+.gradle/
+ajcore.*.txt
+*.orig
+build
