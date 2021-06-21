@@ -1,0 +1,10 @@
+DistanceTariffTest.java
+ DistanceTariffTest
+ DistanceTariffTest$Tariff
+FragileTariffTest.java
+ FragileTariffTest
+ FragileTariffTest$FragileTariff
+ValidateParamTest.java
+ ValidateParamTest
+CalculateCostDeliveryTest.java
+ CalculateCostDeliveryTest
