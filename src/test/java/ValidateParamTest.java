@@ -5,9 +5,17 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class ValidateParamTest {
     @Test
-    void negativeDistanceTest(){
+    void negativeDistanceTest() {
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () ->
-                DeliveryService.validateParam(-21L,Dimensions.BIG,true, Workload.HIGH));
+                DeliveryService.validateParam(-21L, Dimensions.BIG, true, Workload.HIGH));
+
+        assertThat(exception).hasMessage("Значение параметра 'distance' должно быть больше 0");
+    }
+
+    @Test
+    void zeroDistanceTest() {
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () ->
+                DeliveryService.validateParam(0L, Dimensions.BIG, true, Workload.HIGH));
 
         assertThat(exception).hasMessage("Значение параметра 'distance' должно быть больше 0");
     }
